@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="lib/reveal.js/dist/reset.css" />
+		<link rel="stylesheet" href="lib/reveal.js/dist/reveal.css" />
+		<link rel="stylesheet" href="lib/reveal.js/dist/theme/beige.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="lib/reveal.js/dist/plugin/highlight/monokai.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section>
+					<h4>Introduktion</h4>
+						<div class="fragment">☕ Mig</div>
+						<div class="fragment">🍻 Jer</div><aside class="notes">Navn, baggrund, sprog, ønsker</aside>
+						<div class="fragment">🧅 Forventninger og ønsker</div>
+<!--						<div class="fragment">🎪 Hjemmeside</div>-->
+				</section>
+				<section>
+					<section>
+						<h4>Advarsel:</h4>
+						<div class="fragment">AI modeller er statistiske modeller, og vil give forskellige svar på det samme spørgsmål, hvis man spørger flere gange.</div>
+						<div class="fragment">Man kan ikke regne med at svaret er korrekt - der burde være en høj sandsynlighed, men det er ikke givet</div>
+						<div class="fragment">Alt information (billeder, data), som man deler med en AI model i skyen, skal man regne med i princippet bliver offentlige</div>
+					</section>
+					<section>
+						<h4>Her kan det bruges</h4>
+						<div class="fragment">
+							<div>Hvis man selv kan kontrollere svaret, eller der ikke er nogen rigtig løsning, eller svaret ikke er vigtigt, kan det bruges, eksempler:</div>
+							<ul>
+								<li>Udkast til en tale</li>
+								<li>Lav et forslag til indretning af din stue</li>
+								<li>Programmering (til dels fordi det automatisk kan valideres)</li>
+								<li>Fejlsøgning i tekster og kildekode (programmering)</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<h4>Her kan det <i>ikke</i> bruges</h4>
+						<div class="fragment">
+							<div>Hvis man afhænger af at svaret er korrekt, kan det ikke bruges, eksempler:</div>
+							<ul>
+								<li>Opsummering af tekster, som man tager beslutninger udfra</li>
+								<li>Identificering af svampe, som man har tænkt sig at spise</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>At Prompte</h4>
+						<div class="fragment">En måde at kommunikere med en AI Model vha. et chatvindue</div>
+					</section>
+					<section>
+						<table style="font-size: 15px;">
+							<thead><th>Task</th><th>Default pick</th><th>Budget or alternate pick</th><th>Why</th></thead>
+							<tr><td>Hard coding / refactors</td><td>Claude Fable 5.1 or Opus 5.5</td><td>GPT-6 Astra (if enabled)</td><td>Fable 5.1 is generally available and Opus 5.5 costs less; Astra is priced for the hardest work and may need an admin to enable it.</td></tr>
+							<tr><td>Daily coding assistant</td><td>Claude Sonnet 5 or GPT-6 Sol</td><td>Grok 4.6</td><td>Sonnet and Sol cover everyday work, and OpenAI built Sol for coding and agentic work; Grok is useful when current web or X context matters.</td></tr>
+							<tr><td>Writing and editing</td><td>GPT-6 Sol in ChatGPT Work or the API</td><td>Claude Sonnet 5</td><td>Use ChatGPT for a broad tool surface; use Claude when tight constraints matter.</td></tr>
+							<tr><td>Research over long documents</td><td>Gemini 3.8 Flash</td><td>Qwen3.8-Max</td><td>Both list 1M-token input limits; choose based on where your data and deployment already live.</td></tr>
+							<tr><td>Data analysis</td><td>ChatGPT, with GPT-6 Sol on paid plans</td><td>Gemini 3.8 Flash</td><td>ChatGPT has mature data tools; Gemini fits Google-connected work and multimodal inputs.</td></tr>
+							<tr><td>High-volume summaries and extraction</td><td>GPT-6 Luna</td><td>DeepSeek V4 Flash or GLM-5.3-Flash</td><td>OpenAI built Luna for focused, high-volume tasks at $0.10 / $0.50 per 1M tokens; compare cache and peak-hour rules before you switch.</td></tr>
+							<tr><td>Image generation</td><td>GPT Image / ChatGPT or Midjourney</td><td>Nano Banana Pro or Nano Banana 2 Lite</td><td>Use ChatGPT for convenience, Midjourney for style, and Google's Nano Banana models for Google workflows and text-heavy visuals.</td></tr>
+							<tr><td>Video generation</td><td>Gemini Omni Flash</td><td>Veo 3.1 or Runway</td><td>Omni Flash is now Google's default with conversational editing; Veo 3.1 handles scene extension and last-frame control.</td></tr>
+							<tr><td>Automation / agent swarms</td><td>Kimi K3</td><td>n8n + GLM-5.3-Flash</td><td>Kimi offers a Swarm mode; GLM-5.3-Flash is a low-cost option for DIY pipelines at its standard rate.</td></tr>
+						</table>
+					</section>
+					<section>
+						https://chatgpt.com/
+						<div class="fragment">
+							<img data-src="images/chatgptmuligheder.png" style="max-height: 300px;" />
+							<img data-src="images/chatgptpris.png" style="max-height: 300px;" />
+						</div>
+					</section>
+					<section>
+						https://claude.ai/
+						<div class="fragment">
+							<img data-src="images/claudemuligheder.png" style="max-height: 300px;max-width: 500px;" />
+							<img data-src="images/claudepris.png" style="max-height: 300px;" />
+						</div>
+					</section>
+					<section>
+						<div>
+							https://mistral.ai/
+						</div>
+						<div>
+							https://chat.mistral.ai/chat
+						</div>
+						<div class="fragment">
+							<img data-src="images/mistral.png" style="max-height: 300px;max-width: 500px;" />
+						</div>
+					</section>
+					<section>
+						https://gemini.google.com/
+						<div class="fragment">
+							<img data-src="images/geminimuligheder.png" style="max-height: 300px;max-width: 500px;" />
+							<img data-src="images/geminipris.png" style="max-height: 300px;" />
+						</div>
+					</section>
+				</section>
+				<section>
+					<h1>Prompt løs!</h1>
+				</section>
+				<section>
+					<h4>Prompt tips</h4>
+					<ul>
+						<li>Modellerne er som regel blevet trænet på engelsk, så det kan være en fordel at formulere sig på engelsk</li>
+						<li>Starten og slutningen af teksten vægtes som regel højest</li>
+						<li>Chain-of-thought: "Think step by step", "Reason step by step"</li>
+						<li>"Verify if your answer is correct"</li>
+						<li>Spar på høflighederne, det giver sandsynligvis et dårligere svar</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Prompt igen, prøv nogle af tipsene</h1>
+				</section>
+				<section>
+					<h4>Hvad består en AI model af?</h4>
+					<div class="fragment">🤎 Hjertet - Large Language Model (LLM)</div>
+					<div class="fragment">🐴 Harness (seletøj), programmerne der bruger LLMen, eksempelvis et chatvindue</div>
+					<div class="fragment">🕸 Andre programmer, eksempelvis databaser</div>
+				</section>
+				<section>
+					<h4>Hvad er en AI agent?</h4>
+					<div class="fragment">🤷 Det er ikke entydigt defineret</div>
+					<div class="fragment">🎉 En mulig definition: Et harness med en LLM, som reagerer på en hændelse</div>
+				</section>
+				<section>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Nf4NdV8m28I?si=F6fq8cusjrouYen0&amp;start=222" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<div class="fragment">
+						<a href="https://www.youtube.com/@CalNewportMedia">💻 Cal Newport, datalog, forfatter og generelt fornuftig...</a>
+					</div>
+				</section>
+
+				<section>
+					LLM historie: ML -> Transformers -> Reasoning modeller -> Specialiserede modeller (programmering, matematik, filosofi)
+				</section>
+				<section>
+					Gennemgang af historier i nyhederne: Huggingface angreb, opsigelse, stealth thinking
+					Detaljeret gennemgang af LLM opbygning, antal parametre
+					Lokal LLM
+					Træning, fine tuning, RAG
+					Løsning af matematikopgaver
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/reveal.js/dist/reveal.js"></script>
+		<script src="lib/reveal.js/dist/plugin/notes.js"></script>
+		<script src="lib/reveal.js/dist/plugin/markdown.js"></script>
+		<script src="lib/reveal.js/dist/plugin/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>

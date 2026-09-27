@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="lib/reveal.js/dist/reset.css" />
+		<link rel="stylesheet" href="lib/reveal.js/dist/reveal.css" />
+		<link rel="stylesheet" href="lib/reveal.js/dist/theme/beige.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="lib/reveal.js/dist/plugin/highlight/monokai.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="text-align: left;">
+				<section>
+					<h4>Introduktion</h4>
+						<div class="fragment">☕ Mig</div>
+						<div class="fragment">🍻 Jer</div><aside class="notes">Navn, baggrund, sprog, ønsker</aside>
+						<div class="fragment">🧅 Forventninger og ønsker</div>
+<!--						<div class="fragment">🎪 Hjemmeside</div>-->
+				</section>
+				<section>
+					<h4>Om Python</h4>
+					<div class="fragment">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics</div>
+					<div class="fragment">https://www.python.org/</div>
+				</section>
+				<section>
+					<section>
+						<h4>Indledende opgaver</h4>
+					</section>
+					<section>
+						<h4>Installer Python</h4>
+						<div class="fragment">Python er fortolkeren, der eksekverer de kommandoer man giver den</div>
+						<div class="fragment">https://www.python.org/downloads/windows/</div>
+
+						<div class="fragment">Prøv:
+							<pre><code data-trim data-noescape>
+								% python
+								>>> print("Hello World!")
+								>>> 3+7
+							</code></pre>
+						</div>
+
+						<div class="fragment">Og med en Python fil:
+							<ul>
+								<li>Opret en fil: main.py</li>
+								<li>I filen skrives teksten: print("Hello World!")</li>
+								<li>Kør filen med: python main.py</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<h4>Installer uv</h4>
+						<div class="fragment">uv er en pakke-, projekt- og .venv- manager</div>
+						<div class="fragment">https://docs.astral.sh/uv/getting-started/installation/</div>
+					</section>
+					<section>
+						<h4>Installer PyCharm og konfigurer fortolkeren</h4>
+						<div class="fragment">PyCharm er en IDE (Integrated Development Environment), et udviklingsværktøj</div>
+						<div class="fragment">https://docs.astral.sh/uv/getting-started/installation/</div>
+					</section>
+					<section>
+						<h4>Opret Github konto</h4>
+						<div class="fragment">Github er et versionsstyringssystem, som muliggør backup og samarbejde</div>
+						<div class="fragment">https://docs.astral.sh/uv/getting-started/installation/</div>
+					</section>
+					<section>
+						<h4>Valgfrit: Konfigurer github i PyCharm (https://www.jetbrains.com/help/pycharm/set-up-a-github-account.html#github-enterprise)</h4>
+						<div class="fragment">PyCharm understøtter brugen af git</div>
+						<div class="fragment">https://www.jetbrains.com/help/pycharm/working-with-git-tutorial.html#create-test-prj</div>
+					</section>
+					<section>
+						<h4>Lav et nyt projekt med uv og åbn det i Pycharm</h4>
+						<div class="fragment">uv init</div>
+					</section>
+				</section>
+				<section>
+					<h4>Primitiver, variabler og udtryk</h4>
+					<section>
+						<div class="fragment">Primitiver
+							<ul>
+								<li class="fragment">42 int</li>
+								<li class="fragment">4.2 float</li>
+								<li class="fragment">"Monty", 'Monty', """Monty""", '''Monty''' str</li>
+								<li class="fragment">True bool</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<div>
+							<div>Variable</div>
+							<ul>
+								<li class="fragment"> x = 42</li>
+								<li class="fragment">x: int = 42</li>
+							</ul>
+						</div>
+
+					</section>
+					<section>
+						<div>
+							<div>Udtryk</div>
+							<ul>
+								<li class="fragment">42 * 12 - 4</li>
+								<li class="fragment">23 * x</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h4>Aritmetiske operatorer</h4>
+					<div>
+						<ul>
+							<li class="fragment">x + y plus</li>
+							<li class="fragment">x - y minus</li>
+							<li class="fragment">x * y multiplikation</li>
+							<li class="fragment">x / y division</li>
+							<li class="fragment">x // y heltalsdivision</li>
+							<li class="fragment">x ** y potensopløftning</li>
+							<li class="fragment">x % y modulo</li>
+							<li class="fragment">-x unært minus</li>
+							<li class="fragment">+x unært plus</li>
+
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h4>Løkker</h4>
+					Løkker kan løbe igennem data og lave den samme operation på alle elementer
+					<div class="fragment">while
+						<pre>
+							<code data-trim data-noescape>
+								antal_aar = 5
+								aar = 0
+								hovedstol = 143000
+								rente = 0.03
+								while aar < antal_aar:
+									hovedstol *= 1 + rente
+									aar += 1
+
+								print(hovedstol)
+							</code>
+						</pre>
+					</div>
+				</section>
+				<section>
+					<div>for
+						<pre>
+							<code data-trim data-noescape>
+								antal_aar = 5
+								aar = 0
+								hovedstol = 143000
+								rente = 0.03
+								for arr in range(antal_aar):
+									hovedstol *= 1 + rente
+
+								print(hovedstol)
+							</code>
+						</pre>
+					</div>
+				</section>
+				<section>
+					<h4>Betinget udførelse (Conditional Execution)</h4>
+					<div>for
+						<pre>
+							<code data-trim data-noescape>
+								if gaeld > hovedstol * antal_aar * rente:
+									print("Renters rente!")
+								elif gaeld < hovedstol * antal_aar * rente:
+									print("Underligt...")
+								else:
+									print("Heller ikke normalt")
+							</code>
+						</pre>
+					</div>
+				</section>
+				<section>
+					<h4>Forslag til opgaver</h4>
+					<ul>
+						<li class="fragment">Beregn gælden for et lån, hvor renten aftager med et fast interval</li>
+						<li class="fragment">Lav beregninger for annuitetslån (https://regneregler.dk/annuitetslaan/)</li>
+						<li class="fragment">Beregn forskellen mellem at købe og køre i en elbil ift. en brændstofbil</li>
+					</ul>
+				</section>
+				<section>
+					Strings
+					Lists
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/reveal.js/dist/reveal.js"></script>
+		<script src="lib/reveal.js/dist/plugin/notes.js"></script>
+		<script src="lib/reveal.js/dist/plugin/markdown.js"></script>
+		<script src="lib/reveal.js/dist/plugin/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>
