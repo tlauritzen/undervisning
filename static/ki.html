@@ -75,20 +75,6 @@
 						<div class="fragment">En måde at kommunikere med en AI Model vha. et chatvindue</div>
 					</section>
 					<section>
-						<table style="font-size: 15px;">
-							<thead><th>Task</th><th>Default pick</th><th>Budget or alternate pick</th><th>Why</th></thead>
-							<tr><td>Hard coding / refactors</td><td>Claude Fable 5.1 or Opus 5.5</td><td>GPT-6 Astra (if enabled)</td><td>Fable 5.1 is generally available and Opus 5.5 costs less; Astra is priced for the hardest work and may need an admin to enable it.</td></tr>
-							<tr><td>Daily coding assistant</td><td>Claude Sonnet 5 or GPT-6 Sol</td><td>Grok 4.6</td><td>Sonnet and Sol cover everyday work, and OpenAI built Sol for coding and agentic work; Grok is useful when current web or X context matters.</td></tr>
-							<tr><td>Writing and editing</td><td>GPT-6 Sol in ChatGPT Work or the API</td><td>Claude Sonnet 5</td><td>Use ChatGPT for a broad tool surface; use Claude when tight constraints matter.</td></tr>
-							<tr><td>Research over long documents</td><td>Gemini 3.8 Flash</td><td>Qwen3.8-Max</td><td>Both list 1M-token input limits; choose based on where your data and deployment already live.</td></tr>
-							<tr><td>Data analysis</td><td>ChatGPT, with GPT-6 Sol on paid plans</td><td>Gemini 3.8 Flash</td><td>ChatGPT has mature data tools; Gemini fits Google-connected work and multimodal inputs.</td></tr>
-							<tr><td>High-volume summaries and extraction</td><td>GPT-6 Luna</td><td>DeepSeek V4 Flash or GLM-5.3-Flash</td><td>OpenAI built Luna for focused, high-volume tasks at $0.10 / $0.50 per 1M tokens; compare cache and peak-hour rules before you switch.</td></tr>
-							<tr><td>Image generation</td><td>GPT Image / ChatGPT or Midjourney</td><td>Nano Banana Pro or Nano Banana 2 Lite</td><td>Use ChatGPT for convenience, Midjourney for style, and Google's Nano Banana models for Google workflows and text-heavy visuals.</td></tr>
-							<tr><td>Video generation</td><td>Gemini Omni Flash</td><td>Veo 3.1 or Runway</td><td>Omni Flash is now Google's default with conversational editing; Veo 3.1 handles scene extension and last-frame control.</td></tr>
-							<tr><td>Automation / agent swarms</td><td>Kimi K3</td><td>n8n + GLM-5.3-Flash</td><td>Kimi offers a Swarm mode; GLM-5.3-Flash is a low-cost option for DIY pipelines at its standard rate.</td></tr>
-						</table>
-					</section>
-					<section>
 						https://chatgpt.com/ <br />
 						amerikansk, OpenAI, Sam Altman, IPO mål: 2 billioner USD
 						<div class="fragment">
@@ -135,6 +121,20 @@
 					<h1>Prompt løs!</h1>
 				</section>
 				<section>
+					<table style="font-size: 15px;">
+						<thead><th>Task</th><th>Default pick</th><th>Budget or alternate pick</th><th>Why</th></thead>
+						<tr><td>Hard coding / refactors</td><td>Claude Fable 5.1 or Opus 5.5</td><td>GPT-6 Astra (if enabled)</td><td>Fable 5.1 is generally available and Opus 5.5 costs less; Astra is priced for the hardest work and may need an admin to enable it.</td></tr>
+						<tr><td>Daily coding assistant</td><td>Claude Sonnet 5 or GPT-6 Sol</td><td>Grok 4.6</td><td>Sonnet and Sol cover everyday work, and OpenAI built Sol for coding and agentic work; Grok is useful when current web or X context matters.</td></tr>
+						<tr><td>Writing and editing</td><td>GPT-6 Sol in ChatGPT Work or the API</td><td>Claude Sonnet 5</td><td>Use ChatGPT for a broad tool surface; use Claude when tight constraints matter.</td></tr>
+						<tr><td>Research over long documents</td><td>Gemini 3.8 Flash</td><td>Qwen3.8-Max</td><td>Both list 1M-token input limits; choose based on where your data and deployment already live.</td></tr>
+						<tr><td>Data analysis</td><td>ChatGPT, with GPT-6 Sol on paid plans</td><td>Gemini 3.8 Flash</td><td>ChatGPT has mature data tools; Gemini fits Google-connected work and multimodal inputs.</td></tr>
+						<tr><td>High-volume summaries and extraction</td><td>GPT-6 Luna</td><td>DeepSeek V4 Flash or GLM-5.3-Flash</td><td>OpenAI built Luna for focused, high-volume tasks at $0.10 / $0.50 per 1M tokens; compare cache and peak-hour rules before you switch.</td></tr>
+						<tr><td>Image generation</td><td>GPT Image / ChatGPT or Midjourney</td><td>Nano Banana Pro or Nano Banana 2 Lite</td><td>Use ChatGPT for convenience, Midjourney for style, and Google's Nano Banana models for Google workflows and text-heavy visuals.</td></tr>
+						<tr><td>Video generation</td><td>Gemini Omni Flash</td><td>Veo 3.1 or Runway</td><td>Omni Flash is now Google's default with conversational editing; Veo 3.1 handles scene extension and last-frame control.</td></tr>
+						<tr><td>Automation / agent swarms</td><td>Kimi K3</td><td>n8n + GLM-5.3-Flash</td><td>Kimi offers a Swarm mode; GLM-5.3-Flash is a low-cost option for DIY pipelines at its standard rate.</td></tr>
+					</table>
+				</section>
+				<section>
 					<h4>Prompt tips</h4>
 					<ul>
 						<li>Modellerne er som regel blevet trænet på engelsk, så det kan være en fordel at formulere sig på engelsk</li>
@@ -142,6 +142,7 @@
 						<li>Chain-of-thought: "Think step by step", "Reason step by step"</li>
 						<li>"Verify if your answer is correct"</li>
 						<li>Spar på høflighederne, det giver sandsynligvis et dårligere svar</li>
+						<li>Vær konkret og begræns dig</li>
 					</ul>
 				</section>
 				<section>
