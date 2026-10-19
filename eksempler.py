@@ -3,7 +3,7 @@ aar = 0
 hovedstol = 143000
 gaeld = hovedstol
 rente = 0.03
-for arr in range(antal_aar):
+for _ in range(antal_aar):
     gaeld *= 1 + rente
 
 print(gaeld)
